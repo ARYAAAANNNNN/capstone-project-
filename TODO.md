@@ -1,2 +1,14 @@
-# Admin Panel Implementation Steps&#10;&#10;## [x] 0. Planning &amp; TODO created&#10;&#10;## [ ] 1. Create root project files&#10;- package.json&#10;- vite.config.js&#10;- index.html&#10;- main.jsx&#10;- index.css&#10;&#10;## [ ] 2. Create App.jsx with React Router&#10;&#10;## [ ] 3. Create layouts/AdminLayout.jsx&#10;&#10;## [ ] 4. Create components/&#10;- AdminNavbar.jsx&#10;- Sidebar.jsx&#10;- OrderTable.jsx&#10;- MenuForm.jsx&#10;- DashboardCard.jsx&#10;&#10;## [ ] 5. Create pages/admin/&#10;- Dashboard.jsx&#10;- Orders.jsx&#10;- MenuManagement.jsx&#10;- Tables.jsx&#10;&#10;## [ ] 6. Create context/&#10;- OrderContext.jsx&#10;- MenuContext.jsx&#10;&#10;## [ ] 7. Create services/&#10;- api.js&#10;- orderService.js&#10;- menuService.js&#10;&#10;## [ ] 8. Create data/menuData.js&#10;&#10;## [ ] 9. Create styles/admin.css&#10;&#10;## [ ] 10. Install &amp; Run&#10;cd admin &amp;&amp; npm install &amp;&amp; npm run dev
-npm
+## TODO: Fix Admin Sidebar Clickability
+
+**Status: In Progress**
+
+### Plan Steps:
+1. ✅ [Complete] Create TODO.md 
+2. ✅ Update `admin/src/components/Sidebar.jsx` - Add useNavigate, onClick handlers, active states
+3. ✅ Update `admin/src/App.jsx` - Add `/admin/reports` route
+4. ✅ Update `admin/src/layout/DashboardLayout.jsx` - Include Navbar
+5. ✅ Test: `cd admin && npm run dev`
+6. ✅ Verify sidebar navigation works across pages
+7. Remove/update TODO.md
+
+**Next step:** Edit Sidebar.jsx

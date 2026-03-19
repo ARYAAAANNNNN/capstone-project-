@@ -1,57 +1,22 @@
+/* Tailwind base styles - Dashboard layout optimized */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* Reset body/html margins to ensure no global padding interferes with dashboard layout */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  @apply bg-[#F8F9FA] antialiased overflow-x-hidden;
+  box-sizing: border-box;
 }
 
-@layer components {
-  .main-content {
-    @apply ml-56 p-12 min-h-screen w-full max-w-[calc(100vw-224px)];
-  }
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 242px);
-  gap: 24px; /* gap-6 = 1.5rem = 24px */
-  margin-top: 24px; /* mt-6 */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.stat-card {
-  width: 242px;
-  height: 127px;
-  border-radius: 20px;
-  padding: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.stat-card.red    { background-color: #E05C5C; }
-.stat-card.gold   { background-color: #C8973A; }
-.stat-card.green  { background-color: #5BAD72; }
-
-.stat-card .label { font-size: 13px; opacity: 0.9; }
-.stat-card .value { font-size: 28px; font-weight: 700; }
-.stat-card .sub   { font-size: 11px; opacity: 0.75; }
-
-  .divider-white {
-    @apply w-full h-[1px] bg-white opacity-30 my-4;
-  }
-
-  .stat-label { 
-    @apply text-[13px] font-medium opacity-90; 
-  }
-
-  .stat-value { 
-    @apply text-5xl font-black mt-1 leading-tight; 
-  }
-
-  .stat-desc { 
-    @apply text-[11px] opacity-80 font-medium; 
-  }
+#root {
+  margin: 0;
+  padding: 0;
 }

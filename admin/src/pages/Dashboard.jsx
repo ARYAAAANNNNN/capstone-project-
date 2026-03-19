@@ -1,71 +1,98 @@
-import React from 'react';
-import { Search } from 'lucide-react';
+import React from "react";
+import { Search } from "lucide-react";
 
 const Dashboard = () => {
   return (
-    <div className="bg-[#F8F9FA] ml-64 p-8 min-h-screen">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-extrabold text-[#1A202C]">
-          Selamat Datang, Admin !
+    <div className="bg-[#F8F9FA] ml-[240px] w-[calc(100%-240px)] pl-0 pr-10 pt-6 min-h-screen">
+      {/* Header */}
+      <header className="flex justify-between items-center w-full mb-10">
+        <h1 className="text-3xl font-extrabold text-[#1A202C] leading-tight">
+          Selamat Datang, Admin!
         </h1>
-
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+        <div className="relative w-[350px]">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="text"
-            placeholder="Cari menu atau pesanan..."
-            className="pl-10 pr-4 py-2 bg-white rounded-lg border border-gray-200 w-[260px] text-sm focus:outline-none focus:ring-2 focus:ring-[#B34949]"
+            placeholder="Cari pesanan, menu, atau pelanggan..."
+            className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"
           />
         </div>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-4 gap-6 mt-6">
-        <div className="bg-[#A94442] p-6 rounded-3xl text-white shadow-sm">
-          <h5 className="text-xs font-semibold mb-2 uppercase tracking-wide text-white/80">
-            Pesanan
-          </h5>
-          <h2 className="text-3xl font-extrabold mb-4">125</h2>
-          <div className="w-full h-[1px] bg-white/30 mb-3"></div>
-          <div className="flex justify-between text-sm text-white/80">
-            <span>kemarin</span>
-            <span className="font-bold text-green-200">+15%</span>
+      {/* Stat Cards - Clean Grid - Dempet Sidebar */}
+      <div className="-ml-2 grid grid-cols-4 gap-6 w-full">
+
+        {/* 1. Pesanan - Maroon */}
+        <div className="min-h-[190px] p-6 bg-[#A34949] rounded-[28px] text-white flex flex-col justify-between shadow-lg">
+          <div className="flex-grow">
+            <p className="text-[13px] font-semibold leading-[1.1] mb-2">
+              Total Pesanan <br /> Hari Ini
+            </p>
+            <h2 className="text-5xl font-black">125</h2>
+          </div>
+          <div>
+            <div className="w-full h-px bg-white/30 mb-3"></div>
+            <p className="text-[11px] font-light">
+              pesanan <span className="font-semibold">+15 dari kemarin</span>
+            </p>
           </div>
         </div>
 
-        <div className="bg-[#D19446] p-6 rounded-3xl text-white shadow-sm">
-          <h5 className="text-xs font-semibold mb-2 uppercase tracking-wide text-white/80">
-            Menu
-          </h5>
-          <h2 className="text-3xl font-extrabold mb-4">64</h2>
-          <div className="w-full h-[1px] bg-white/30 mb-3"></div>
-          <p className="text-sm text-white/80">Aktif</p>
+        {/* 2. Menu - Gold */}
+        <div className="min-h-[190px] p-6 bg-[#CD9245] rounded-[28px] text-white flex flex-col justify-between shadow-lg">
+          <div className="flex-grow">
+            <p className="text-[13px] font-semibold leading-[1.1] mb-2">
+              Total Menu
+            </p>
+            <h2 className="text-5xl font-black">64</h2>
+          </div>
+          <div>
+            <div className="w-full h-px bg-white/30 mb-3"></div>
+            <p className="text-[11px] font-light">
+              Menu aktif di restoran
+            </p>
+          </div>
         </div>
 
-        <div className="bg-[#FF2E2E] p-6 rounded-3xl text-white shadow-sm">
-          <h5 className="text-xs font-semibold mb-2 uppercase tracking-wide text-white/80">
-            Pengunjung
-          </h5>
-          <h2 className="text-3xl font-extrabold mb-4">968</h2>
-          <div className="w-full h-[1px] bg-white/30 mb-3"></div>
-          <div className="grid grid-cols-2 text-sm text-white/80">
-            <div>
-              <span>Hari</span>
-              <span className="block font-bold text-white">125</span>
-            </div>
-            <div className="text-right">
-              <span>Mgg</span>
-              <span className="block font-bold text-white">764</span>
+        {/* 3. Pengunjung - Red */}
+        <div className="min-h-[190px] p-6 bg-[#FF2E2E] rounded-[28px] text-white flex flex-col justify-between shadow-lg">
+          <div className="flex-grow">
+            <p className="text-[13px] font-semibold leading-[1.1] mb-2">
+              Total Pengunjung
+            </p>
+            <h2 className="text-5xl font-black">968</h2>
+          </div>
+          <div>
+            <div className="w-full h-px bg-white/30 mb-3"></div>
+            <div className="grid grid-cols-2 gap-4 text-[11px] font-light">
+              <div>
+                <div>Hari ini</div>
+                <div className="font-semibold text-sm">125</div>
+              </div>
+              <div className="text-right">
+                <div>Minggu ini</div>
+                <div className="font-semibold text-sm">764</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-[#82A961] p-6 rounded-3xl text-white shadow-sm">
-          <h5 className="text-xs font-semibold mb-2 uppercase tracking-wide text-white/80">
-            Pendapatan
-          </h5>
-          <h2 className="text-3xl font-extrabold mb-4">Rp 2.350.000</h2>
-          <div className="w-full h-[1px] bg-white/30 mb-3"></div>
-          <p className="text-sm text-white/80">Hari ini</p>
+        {/* 4. Pendapatan - Green */}
+        <div className="min-h-[190px] p-6 bg-[#7DA05E] rounded-[28px] text-white flex flex-col justify-between shadow-lg">
+          <div className="flex-grow">
+            <p className="text-[13px] font-semibold leading-[1.1] mb-2">
+              Pendapatan Hari Ini
+            </p>
+            <h2 className="text-[28px] font-black tracking-[-0.02em]">
+              Rp 2.350.000
+            </h2>
+          </div>
+          <div>
+            <div className="w-full h-px bg-white/30 mb-3"></div>
+            <p className="text-[11px] font-light">
+              Total dari pesanan hari ini
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -73,3 +100,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
